@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './UserForm.css'
+import {Link } from "react-router-dom";
+
 const UserForm = () => {
     const [formData, setFormData] = useState({
         full_name: '',
@@ -15,7 +17,9 @@ const UserForm = () => {
             [e.target.name]: e.target.value,
         });
     };
+    const handleNextPage = (e) => {
 
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
         // You can add your form submission logic here
@@ -62,9 +66,10 @@ const UserForm = () => {
 
                 </div>
                 <div>
-                <button className='button' type="submit">
+                <Link to="/select-course"><button className='button' type="submit">
                     Tiếp tục
                 </button>
+                </Link>
                 </div>
             </form>
         </div>

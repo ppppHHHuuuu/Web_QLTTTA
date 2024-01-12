@@ -1,18 +1,19 @@
-import logo from './logo.svg';
-import UserForm from './components/UserForm/UserForm.js';
 import './App.css';
-
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from './page/HomePage/HomePage.js';
+import SelectCourse from './page/SelectCourse/SelectCourse.js';
+const App = () => {
   return (
-    <>
-      <div className="App">
-        <img className='backgroundImg' src={require('./assets/cover_ava.jpg')} alt='cover' />
-        <div className='userFormOverlay'>
-          <UserForm />
-        </div>
-      </div>
-    </>
-  );
+    <BrowserRouter>
+    <Routes>
+      <Route index element={<HomePage />} />
+      <Route path="/select-course" element={<SelectCourse />} />
+
+      {/* TODO */}
+      {/* <Route path="/confirm-course" element={<ConfirmCourse />} /> */}
+    </Routes>
+  </BrowserRouter>
+  ) 
 }
 
 export default App;
