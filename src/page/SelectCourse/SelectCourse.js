@@ -73,7 +73,7 @@ const SelectCourse = () => {
                     </div>
                 ))}
             </div>
-            <Link to="/confirm-course">
+            <Link to="/">
             <button
                 style={{
                     fontSize:"20px",
